@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% block contents%}
+<head>
+  <title>new</title>
+  <link href="https://fonts.googleapis.com/css?family=Akronim" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Sofia" rel="stylesheet">  
+  <style>
+    body{
+      background-color: black;
+    }
+    h1{
+        text-align:center;
+        font-family: 'Akronim', cursive;
+        font-size: 5em;
+        color:red;
+    }
+    button{
+        background-color:red;
+        border:0px;
+        display:block;
+        margin:auto;
+        width:10em;
+        height:4em;
+        border-radius:10%;
+        font-family: 'Sofia', cursive;
+        font-size: 1em;
+    }
+    h4{
+        font-family: 'Sofia', cursive;
+        color: white;
+        font-size:2em;
+        position:relative;
+        left:2em;
+    }
+    input, textarea{
+        border:none;
+        background-color:white;
+        color:white;
+        display:block;
+        font-size:2em;
+        height:2em;
+        width:20em;
+        font-family: 'Sofia', cursive;
+        border-radius:10%;
+        position:relative;
+        left:5em;
+
+    }
+    textarea{
+      height:10em !important;
+      width: 20em !important;
+    }
+  </style>
+
+</head>
+<body>
+    <br>
+    <h1> WRITE </h1>
+    <form action='{% url "create" %}'>
+        <h4>TITLE :  </h4>
+        <input type='text' name='title'>
+        <br><br>  
+        <h4>TEXT : </h4><textarea name = 'body'></textarea>
+        <br><br>
+        <button>SUBMIT</button>
+    </form>
+</body>
+</html>
+{% endblock %}

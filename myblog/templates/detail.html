@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block contents%}
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Akronim" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sofia" rel="stylesheet">
+    <style>
+    body{
+        background-color:black;
+    }
+    h1{
+        text-align:center;
+        font-family: 'Akronim', cursive;
+        font-size: 5em;
+        color:red;
+    }
+    h2{
+        font-family: 'Sofia', cursive;
+        color: white;
+        font-size:2em;
+        position:relative;
+        left:2em;      
+    }
+    p{
+      font-family:'Sofia', cursive;
+    }
+    </style>  
+  <title>detail</title>
+</head>
+<body>
+    <br>
+    <h1>This is my story</h1>
+    <br><br>
+    <h2>Title : {{blog.title}}</h2>
+    <p><h2>Date :</h2> {{blog.pub_date}}</p>
+    <p><h2>Text : </h2>{{blog.body}} </p>
+</body>
+</html>
+{% endblock %}

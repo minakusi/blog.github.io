@@ -20,8 +20,11 @@
         position:relative;
         left:2em;      
     }
-    p{
-      font-family:'Sofia', cursive;
+    h3{
+      position:relative;
+      left:5em;
+      font-family: 'Sofia', cursive;
+      color: white;
     }
     </style>  
   <title>detail</title>
@@ -31,8 +34,8 @@
     <h1>This is my story</h1>
     <br><br>
     <h2>Title : {{blog.title}}</h2>
-    <p><h2>Date :</h2> {{blog.pub_date}}</p>
-    <p><h2>Text : </h2>{{blog.body}} </p>
+    <h2>Date :</h2> <h3>{{blog.pub_date}}</h3>
+    <h2>Text : </h2> <h3>{{blog.body}} </h3>
 </body>
 </html>
 {% endblock %}

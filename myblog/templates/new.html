@@ -35,7 +35,7 @@
     input, textarea{
         border:none;
         background-color:white;
-        color:white;
+        color:black;
         display:block;
         font-size:2em;
         height:2em;
@@ -50,20 +50,34 @@
       height:10em !important;
       width: 20em !important;
     }
+    
+    tr{
+      vertical-align:top;
+      color:white;
+      font-family: 'Sofia', cursive;
+      border: 70px solid black;      
+    }
+    
+    th{
+      font-size:2.5em;
+      text-align:right;
+    }
   </style>
 
 </head>
 <body>
     <br>
-    <h1> WRITE </h1>
-    <form action='{% url "create" %}'>
-        <h4>TITLE :  </h4>
-        <input type='text' name='title'>
-        <br><br>  
-        <h4>TEXT : </h4><textarea name = 'body'></textarea>
-        <br><br>
-        <button>SUBMIT</button>
-    </form>
+<h1> This is my STORY </h1>    
+<div class = 'container'>
+  <form method='POST'>
+  {% csrf_token %}
+  <table>
+    {{form.as_table}}
+  </table>
+  <br>
+    <button>SUBMIT</button>
+  </form>
+</div>
 </body>
 </html>
 {% endblock %}
